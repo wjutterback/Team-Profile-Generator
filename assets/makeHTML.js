@@ -1,12 +1,14 @@
 const template = require('./template');
 const fs = require('fs');
-// use forEach to iterate over array and maybe make a card for each before passing into template.
+// attempt to use forEach to iterate over array and make a card for each before passing into template.
 function makeHTML(data) {
-  data.forEach{
+  data.forEach((i) => {
 
-  }
-  const templateData = template(data);
-  writeToFile(templateData);
+  });
+
+  // }
+  // const templateData = template(data);
+  // writeToFile(templateData);
 }
 
 function writeToFile(data) {

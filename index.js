@@ -32,7 +32,6 @@ async function answerResults() {
     answerResults();
   } else if (shunt.choice === 'Finish Building Team') {
     makeHTML(answerArr);
-    console.log(answerArr.length);
   }
 }
 

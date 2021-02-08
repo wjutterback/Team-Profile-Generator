@@ -2,9 +2,9 @@ const inquirer = require('inquirer');
 const makeHTML = require('./assets/makeHTML');
 const q = require('./assets/questions');
 const inquirerQ = require('./assets/prompts');
-const answerArr = [];
 
 function init() {
+  const answerArr = [];
   inquirer
     .prompt(q.managerQuestions)
     .then((data) => {
@@ -12,7 +12,7 @@ function init() {
       if (data.choice === 'Finish Building Team') {
         makeHTML(answerArr);
       } else {
-        answerResults();
+        answerResults(answerArr);
       }
     })
     .catch((error) => {
@@ -20,7 +20,7 @@ function init() {
     });
 }
 
-async function answerResults() {
+async function answerResults(answerArr) {
   let shunt = await inquirerQ(q.selectionShunt);
   if (shunt.choice === 'Add an Engineer') {
     let answerEngineer = await inquirerQ(q.engineerQuestions);

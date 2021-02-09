@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const makeHTML = require('./assets/makeHTML');
 const q = require('./assets/questions');
 const inquirerQ = require('./assets/prompts');
+const fs = require('fs');
 
 function init() {
   const answerArr = [];
@@ -31,8 +32,14 @@ async function answerResults(answerArr) {
     answerArr.push(answerIntern);
     answerResults(answerArr);
   } else if (shunt.choice === 'Finish Building Team') {
-    makeHTML(answerArr);
+    const templateData = await makeHTML(answerArr);
+    writeToFile(templateData);
   }
+}
+
+function writeToFile(data) {
+  console.log('Writing file now');
+  fs.writeFileSync(`./index.html`, data);
 }
 
 init();

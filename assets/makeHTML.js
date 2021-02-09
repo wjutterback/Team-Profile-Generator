@@ -2,7 +2,6 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const template = require('./template');
-const fs = require('fs');
 
 function makeHTML(answerArr) {
   const managers = [];
@@ -21,12 +20,7 @@ function makeHTML(answerArr) {
     }
   });
   const templateData = template(managers, interns, engineers);
-  writeToFile(templateData);
-}
-
-function writeToFile(data) {
-  console.log('Writing file now');
-  fs.writeFileSync(`./index.html`, data);
+  return templateData;
 }
 
 module.exports = makeHTML;

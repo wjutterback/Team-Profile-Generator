@@ -1,22 +1,22 @@
 const managerQuestions = [
   {
     type: 'input',
-    name: 'managerName',
+    name: 'name',
     message: "What is the team manager's name?",
   },
   {
     type: 'input',
-    name: 'managerID',
+    name: 'id',
     message: "What is the team manager's employee ID?",
   },
   {
     type: 'input',
-    name: 'managerEmail',
+    name: 'email',
     message: "What is the team manager's e-mail address?",
   },
   {
     type: 'input',
-    name: 'managerOffice',
+    name: 'office',
     message: "What is the team manager's office number?",
   },
 ];
@@ -24,47 +24,48 @@ const managerQuestions = [
 const engineerQuestions = [
   {
     type: 'input',
-    name: 'engineerName',
+    name: 'name',
     message: "What is the engineer's name?",
   },
   {
     type: 'input',
-    name: 'engineerID',
+    name: 'id',
     message: "What is the engineer's employee ID?",
   },
   {
     type: 'input',
-    name: 'engineerEmail',
+    name: 'email',
     message: "What is the engineer's e-mail address?",
   },
   {
     type: 'input',
-    name: 'engineerGitHub',
+    name: 'github',
     message: "What is the engineer's GitHub username?",
   },
 ];
 const internQuestions = [
   {
     type: 'input',
-    name: 'internName',
+    name: 'name',
     message: "What is the intern's name?",
   },
   {
     type: 'input',
-    name: 'internID',
+    name: 'id',
     message: "What is the intern's employee ID?",
   },
   {
     type: 'input',
-    name: 'internEmail',
+    name: 'email',
     message: "What is the intern's e-mail address?",
   },
   {
     type: 'input',
-    name: 'internGitHub',
+    name: 'school',
     message: 'Which school does the intern attend?',
   },
 ];
+
 const selectionShunt = [
   {
     type: 'list',

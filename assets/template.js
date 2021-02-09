@@ -10,8 +10,9 @@ const buildTemplate = (manager, intern, engineer) => {
           </div>
           <div class ="card-body" style="background-color: rgb(231, 229, 229)">
             <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: ${manager.id}</li>
               <li class="list-group-item">Office: ${manager.officeNumber}</li>
-              <li class="list-group-item">Email: ${manager.email}</li>
+              <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
             </ul>
           </div>
           </div>
@@ -40,8 +41,9 @@ const buildTemplate = (manager, intern, engineer) => {
     </div>
     <div class="card-body" style="background-color: rgb(231, 229, 229)">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Office: ${engineer.github}</li>
-        <li class="list-group-item">Email: ${engineer.email}</li>
+        <li class="list-group-item">ID: ${engineer.id}</li>
+        <li class="list-group-item">GitHub: <a href="https://www.github.com/${engineer.github}">Profile</a></li>
+        <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
       </ul>
     </div>
   </div>`;
@@ -69,8 +71,9 @@ const buildTemplate = (manager, intern, engineer) => {
     </div>
     <div class="card-body" style="background-color: rgb(231, 229, 229)">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Office: ${intern.school}</li>
-        <li class="list-group-item">Email: ${intern.email}</li>
+        <li class="list-group-item">ID: ${intern.id}</li>
+        <li class="list-group-item">School: ${intern.school}</li>
+        <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
       </ul>
     </div>
   </div>`;

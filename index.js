@@ -31,7 +31,6 @@ async function answerResults(answerArr) {
     answerArr.push(answerIntern);
     answerResults(answerArr);
   } else if (shunt.choice === 'Finish Building Team') {
-    console.log(answerArr);
     makeHTML(answerArr);
   }
 }

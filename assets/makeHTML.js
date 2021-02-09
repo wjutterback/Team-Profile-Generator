@@ -4,9 +4,7 @@ const Intern = require('./lib/Intern');
 const template = require('./template');
 const fs = require('fs');
 
-// attempt to use forEach to iterate over array and make a card for each before passing into template.
 function makeHTML(answerArr) {
-  // const employees = data.map...
   const managers = [];
   const engineers = [];
   const interns = [];
@@ -25,8 +23,6 @@ function makeHTML(answerArr) {
   const templateData = template(managers, interns, engineers);
   writeToFile(templateData);
 }
-
-// }
 
 function writeToFile(data) {
   console.log('Writing file now');

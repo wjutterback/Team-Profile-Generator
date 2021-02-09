@@ -77,7 +77,7 @@ const buildTemplate = (manager, intern, engineer) => {
     employeesArr.push(data);
   });
 
-  const cards = employeesArr.join();
+  const cards = employeesArr.join('');
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -105,5 +105,3 @@ const buildTemplate = (manager, intern, engineer) => {
 };
 
 module.exports = buildTemplate;
-
-// `

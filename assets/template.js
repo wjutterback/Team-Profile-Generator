@@ -2,30 +2,45 @@ const buildTemplate = (manager, intern, engineer) => {
   const employeesArr = [];
 
   manager.forEach((manager) => {
-    data = `<div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">${manager.name}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <div class ="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Office: ${manager.officeNumber}</li>
-            <li class="list-group-item">Email: ${manager.email}</li>
-          </ul>
-        </div>
-      </div>`;
+    data = `<div class="col-lg-12">
+    <div class="card d-flex mx-auto" style="margin-top: 30px; width: 18rem; box-shadow: 5px 5px 3px grey">
+          <div class="card-body bg-primary text-center">
+            <h5 class="card-title" style="font-size: 2rem; color: white">${manager.name}</h5>
+            <p class="card-text" style="font-size: 1.25rem; color: white"><i class="fas fa-tasks"></i> ${manager.role}</p>
+          </div>
+          <div class ="card-body" style="background-color: rgb(231, 229, 229)">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Office: ${manager.officeNumber}</li>
+              <li class="list-group-item">Email: ${manager.email}</li>
+            </ul>
+          </div>
+          </div>
+        </div>`;
     employeesArr.push(data);
   });
 
   engineer.forEach((engineer) => {
-    data = `<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">${engineer.name}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    data = `<div
+    class="card d-flex"
+    style="
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 18rem;
+      box-shadow: 5px 5px 3px grey;
+    "
+  >
+    <div class="card-body bg-primary text-center">
+      <h5 class="card-title" style="font-size: 2rem; color: white">
+        ${engineer.name}
+      </h5>
+      <p class="card-text" style="font-size: 1.25rem; color: white">
+        <i class="fas fa-briefcase"></i> ${engineer.role}
+      </p>
     </div>
-    <div class ="card-body">
+    <div class="card-body" style="background-color: rgb(231, 229, 229)">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">GitHub: ${engineer.github}</li>
+        <li class="list-group-item">Office: ${engineer.github}</li>
         <li class="list-group-item">Email: ${engineer.email}</li>
       </ul>
     </div>
@@ -34,14 +49,27 @@ const buildTemplate = (manager, intern, engineer) => {
   });
 
   intern.forEach((intern) => {
-    data = `<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">${intern.name}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    data = `<div
+    class="card d-flex"
+    style="
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 18rem;
+      box-shadow: 5px 5px 3px grey;
+    "
+  >
+    <div class="card-body bg-primary text-center">
+      <h5 class="card-title" style="font-size: 2rem; color: white">
+        ${intern.name}
+      </h5>
+      <p class="card-text" style="font-size: 1.25rem; color: white">
+        <i class="fas fa-glasses"></i> ${intern.role}
+      </p>
     </div>
-    <div class ="card-body">
+    <div class="card-body" style="background-color: rgb(231, 229, 229)">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">School: ${intern.school}</li>
+        <li class="list-group-item">Office: ${intern.school}</li>
         <li class="list-group-item">Email: ${intern.email}</li>
       </ul>
     </div>
@@ -60,9 +88,17 @@ const buildTemplate = (manager, intern, engineer) => {
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   />
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
   </head>
   <body>
+  <div class="row">
   ${cards}
+  </div>
   </body>
   </html>
   `;

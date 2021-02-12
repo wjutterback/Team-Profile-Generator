@@ -3,6 +3,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const template = require('./template');
 
+//Creates each team member class and stores in an array which is passed to template data.
 function makeHTML(answerArr) {
   const managers = [];
   const engineers = [];

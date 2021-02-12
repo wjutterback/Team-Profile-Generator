@@ -42,7 +42,7 @@ const buildTemplate = (manager, intern, engineer) => {
     <div class="card-body" style="background-color: rgb(231, 229, 229)">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">ID: ${engineer.id}</li>
-        <li class="list-group-item">GitHub: <a href="https://www.github.com/${engineer.github}">Profile</a></li>
+        <li class="list-group-item">GitHub: <a href="https://www.github.com/${engineer.github}" target="_blank">Profile</a></li>
         <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
       </ul>
     </div>

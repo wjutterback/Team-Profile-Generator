@@ -5,7 +5,9 @@
 
 > Use command line input to build a team consisting of a manager, engineers, and interns.
 
-## Link to Deployed Application
+## Link to Video Walkthrough
+
+https://youtu.be/xxHnApT6PlI
 
 ## Table of Contents
 

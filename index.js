@@ -1,4 +1,3 @@
-const inquirer = require('inquirer');
 const makeHTML = require('./assets/makeHTML');
 const q = require('./assets/questions');
 const inquirerQ = require('./assets/prompts');
